@@ -32,8 +32,8 @@ const Footer = ({selectedCountry, handleCountryChange, currentCountry}: FooterPr
                         <DownloadLogoContainer>
                             <CasinoLogo src={casinoLogo} alt="Casino Royale" style={{ width: '180px', marginBottom: 0 }} />
                         </DownloadLogoContainer>
-                        <DownloadTitle>Download Casino</DownloadTitle>
-                        <DownloadSubtitle>Play Mini anywhere, anytime</DownloadSubtitle>
+                        <DownloadTitle>{currentCountry.translations.downloadCasino}</DownloadTitle>
+                        <DownloadSubtitle>{currentCountry.translations.playAnywhere}</DownloadSubtitle>
                         <DownloadButton
                             variant="contained"
                             color="primary"
@@ -42,7 +42,7 @@ const Footer = ({selectedCountry, handleCountryChange, currentCountry}: FooterPr
                             $hoverGradient={currentCountry.hoverGradient}
                         >
                             <DownloadIcon src={downloadIcon} alt="Download" />
-                            Install App
+                            {currentCountry.translations.installApp}
                         </DownloadButton>
                     </DownloadCard>
                 </DownloadSection>
@@ -50,14 +50,14 @@ const Footer = ({selectedCountry, handleCountryChange, currentCountry}: FooterPr
                     <AgeRestriction>
                         <AgeIcon src={adultIcon}/>
                         <Typography style={{ color: 'rgba(255, 255, 255, 0.7)'}}>
-                            Only 18+
+                            {currentCountry.translations.only18}
                         </Typography>
                     </AgeRestriction>
 
                     <LicenseSection>
                         <LicenseLogo src={licenseLogo} alt="License" />
                         <LicenseText>
-                            Casino is certified by the Anjuan Gaming Authority
+                            {currentCountry.translations.certified}
                         </LicenseText>
                     </LicenseSection>
                 </Box>
@@ -81,7 +81,7 @@ const Footer = ({selectedCountry, handleCountryChange, currentCountry}: FooterPr
                 </Box>
                 <Box>
                     <Box sx={{display: "flex", flexDirection: 'column', gap: "12px", alignItems: 'flex-end'}}>
-                        <SocialTitle>Us on social media:</SocialTitle>
+                        <SocialTitle>{currentCountry.translations.socialMedia}</SocialTitle>
                         <SocialIcons>
                             <SocialIcon src={instagramIcon} alt="Instagram" />
                             <SocialIcon src={telegram} alt="Telegram" />

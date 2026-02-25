@@ -29,8 +29,8 @@ const MobileFooter = ({selectedCountry, handleCountryChange, currentCountry}: Fo
                     <DownloadLogoContainer>
                         <CasinoLogo src={casinoLogo} alt="Casino Royale" style={{ width: '180px', marginBottom: 0 }} />
                     </DownloadLogoContainer>
-                    <DownloadTitle>Download Casino</DownloadTitle>
-                    <DownloadSubtitle>Play Mini anywhere, anytime</DownloadSubtitle>
+                    <DownloadTitle>{currentCountry.translations.downloadCasino}</DownloadTitle>
+                    <DownloadSubtitle>{currentCountry.translations.playAnywhere}</DownloadSubtitle>
                     <DownloadButton
                         variant="contained"
                         color="primary"
@@ -39,7 +39,7 @@ const MobileFooter = ({selectedCountry, handleCountryChange, currentCountry}: Fo
                         $hoverGradient={currentCountry.hoverGradient}
                     >
                         <DownloadIcon src={downloadIcon} alt="Download" />
-                        Install App
+                        {currentCountry.translations.installApp}
                     </DownloadButton>
                 </DownloadCard>
             </DownloadSection>
@@ -61,7 +61,7 @@ const MobileFooter = ({selectedCountry, handleCountryChange, currentCountry}: Fo
             </Box>
             <Box sx={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
                 <Box sx={{display: "flex", flexDirection: 'column', gap: "12px", alignItems: 'center'}}>
-                    <SocialTitle>Us on social media:</SocialTitle>
+                    <SocialTitle>{currentCountry.translations.socialMedia}</SocialTitle>
                     <SocialIcons>
                         <SocialIcon src={instagramIcon} alt="Instagram" />
                         <SocialIcon src={telegram} alt="Telegram" />
@@ -74,14 +74,14 @@ const MobileFooter = ({selectedCountry, handleCountryChange, currentCountry}: Fo
                 <AgeRestriction sx={{flexDirection: 'column', width: '290px'}}>
                     <AgeIcon src={adultIcon}/>
                     <Typography style={{ color: 'rgba(255, 255, 255, 0.7)'}}>
-                        Only 18+
+                        {currentCountry.translations.only18}
                     </Typography>
                 </AgeRestriction>
 
                 <LicenseSection sx={{flexDirection: 'column', width: '290px'}}>
                     <LicenseLogo src={licenseLogo} alt="License" />
                     <LicenseText>
-                        Casino is certified by the Anjuan Gaming Authority
+                        {currentCountry.translations.certified}
                     </LicenseText>
                 </LicenseSection>
             </CertificateWrapper>

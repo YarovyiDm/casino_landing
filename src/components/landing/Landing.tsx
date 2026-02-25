@@ -44,7 +44,7 @@ const Landing = () => {
                     $hoverGradient={currentCountry.hoverGradient}
                     onClick={handleOpenGame}
                 >
-                    OPEN THE GAME
+                    {currentCountry.translations.openGame}
                 </OpenGameButton>
             </TopBlock>
             <GameModal

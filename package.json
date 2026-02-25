@@ -3,9 +3,12 @@
   "version": "1.0.0",
   "description": "Casino project with React, Webpack, TypeScript, MUI, and Styled Components",
   "main": "index.js",
+  "homepage": "https://yarovyi.github.io/casino_landing",
   "scripts": {
     "start": "webpack serve --mode development",
-    "build": "webpack --mode production"
+    "build": "webpack --mode production",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "keywords": [],
   "author": "",
@@ -23,6 +26,7 @@
     "@types/react": "^18.2.0",
     "@types/react-dom": "^18.2.0",
     "@types/styled-components": "^5.1.26",
+    "gh-pages": "^6.3.0",
     "html-webpack-plugin": "^5.5.0",
     "ts-loader": "^9.4.0",
     "typescript": "^5.0.0",
